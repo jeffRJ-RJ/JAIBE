@@ -1,27 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
-    --primary: 48 89% 60%;
-    --primary-foreground: 87 45% 23%;
-    --border: 220 13% 91%;
+    /* Core Brand Colors - More contrast for street vibe */
+    --calendula: 47 88% 55%;
+    --calendula-light: 47 88% 65%;
+    --calendula-dark: 47 88% 40%;
+    --military: 84 45% 22%;
+    --military-light: 84 35% 32%;
+    --military-dark: 84 50% 10%;
+    
+    /* Semantic tokens */
+    --background: 84 50% 8%;
+    --foreground: 47 20% 92%;
+
+    --card: 84 45% 12%;
+    --card-foreground: 47 20% 92%;
+
+    --popover: 84 45% 12%;
+    --popover-foreground: 47 20% 92%;
+
+    --primary: 47 88% 55%;
+    --primary-foreground: 84 50% 8%;
+
+    --secondary: 84 35% 18%;
+    --secondary-foreground: 47 20% 92%;
+
+    --muted: 84 30% 18%;
+    --muted-foreground: 47 20% 65%;
+
+    --accent: 47 88% 55%;
+    --accent-foreground: 84 50% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 84 30% 25%;
+    --input: 84 30% 25%;
+    --ring: 47 88% 55%;
+
+    --radius: 0.25rem;
+
+    /* Custom Properties */
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+    
+    /* Street Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(84 50% 6%) 0%, hsl(84 45% 12%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(47 88% 55%) 0%, hsl(47 88% 65%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(84 50% 8%) 0%, hsl(84 50% 4%) 100%);
+    
+    /* Shadows - More dramatic */
+    --shadow-glow: 0 0 80px hsl(47 88% 55% / 0.25);
+    --shadow-hard: 4px 4px 0px hsl(47 88% 55%);
+    --shadow-card: 0 25px 50px hsl(84 50% 3% / 0.6);
+    
+    /* Sidebar */
+    --sidebar-background: 84 45% 12%;
+    --sidebar-foreground: 47 20% 92%;
+    --sidebar-primary: 47 88% 55%;
+    --sidebar-primary-foreground: 84 50% 8%;
+    --sidebar-accent: 84 35% 18%;
+    --sidebar-accent-foreground: 47 20% 92%;
+    --sidebar-border: 84 30% 25%;
+    --sidebar-ring: 47 88% 55%;
   }
 
   .dark {
-    --background: 0 0% 9%;
-    --foreground: 0 0% 100%;
-    --primary: 48 89% 50%;
-    --primary-foreground: 87 45% 85%;
-    --border: 220 13% 20%;
+    --background: 84 50% 8%;
+    --foreground: 47 20% 92%;
+    --card: 84 45% 12%;
+    --card-foreground: 47 20% 92%;
+    --popover: 84 45% 12%;
+    --popover-foreground: 47 20% 92%;
+    --primary: 47 88% 55%;
+    --primary-foreground: 84 50% 8%;
+    --secondary: 84 35% 18%;
+    --secondary-foreground: 47 20% 92%;
+    --muted: 84 30% 18%;
+    --muted-foreground: 47 20% 65%;
+    --accent: 47 88% 55%;
+    --accent-foreground: 84 50% 8%;
+    --border: 84 30% 25%;
+    --input: 84 30% 25%;
+    --ring: 47 88% 55%;
   }
 }
 
 @layer base {
+  * {
+    @apply border-border;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+  
+  .hero-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .card-elevated {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-hard {
+    box-shadow: var(--shadow-hard);
+  }
+  
+  /* Street texture overlay */
+  .texture-noise {
+    position: relative;
+  }
+  
+  .texture-noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+  
+  /* Grunge border effect */
+  .border-rough {
+    position: relative;
+  }
+  
+  .border-rough::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, hsl(var(--primary)) 0%, transparent 50%, hsl(var(--primary)) 100%);
+    z-index: -1;
+    opacity: 0.5;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+  
+  .animate-float-slow {
+    animation: float 8s ease-in-out infinite 1s;
+  }
+  
+  .animate-glitch {
+    animation: glitch 3s infinite;
+  }
+  
+  .text-stroke {
+    -webkit-text-stroke: 1px hsl(var(--primary));
+    color: transparent;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg);
+  }
+}
+
+@keyframes glitch {
+  0%, 90%, 100% {
+    transform: translate(0);
+  }
+  92% {
+    transform: translate(-2px, 2px);
+  }
+  94% {
+    transform: translate(2px, -2px);
+  }
+  96% {
+    transform: translate(-2px, -2px);
+  }
+  98% {
+    transform: translate(2px, 2px);
+  }
+}
+
+/* Custom scrollbar - more minimal */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Selection color */
+::selection {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+@layer utilities {
+  .bg-grid-pattern {
+    --grid-color: hsl(var(--calendula) / 0.15);
+    --grid-size: 40px;
+    
+    background-color: hsl(var(--background));
+    background-image: 
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+    background-position: -1px -1px;
+  }
+  
+  .bg-dot-pattern {
+    --dot-color: hsl(var(--calendula) / 0.2);
+    --dot-size: 1px;
+    --dot-spacing: 20px;
+    
+    background-color: hsl(var(--background));
+    background-image: radial-gradient(var(--dot-color) var(--dot-size), transparent var(--dot-size));
+    background-size: var(--dot-spacing) var(--dot-spacing);
   }
 }
