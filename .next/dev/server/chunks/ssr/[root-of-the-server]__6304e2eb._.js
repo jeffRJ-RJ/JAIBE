@@ -149,6 +149,48 @@ const __TURBOPACK__default__export__ = {
     blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABE0lEQVR42gEIAff+AHxBAAF1QgUtb0gRplM5FOh1ThXpZ0MRqmY5Bi98QgABAHtFBSp+UxLGVzMV/UsrFf9SLhX/RysV/lI2Esl4RAcsAHdOEZtzShb9Ui0V/08sFf9NKxX/SioV/043Ff1YOxGgAFxCFdtPNhb/PjIZ/z4zGf9ANBr/SjcY/19CFv8+LhTeAIxgFdlzVRf/P0Md/zk+Hf9BRx7/WlEc/5xsFv+AWRXbAD0nD5F6Vhb8q3cY/4xiFv9yUBb/gV0W/5ZmFvxiQBGSAGc3BCCCUBC2iV4W+4pgFv9yTRX/hF4V/HtTEbduPQUhAHg+AABoNwQfYz8PinZOE9JlRBPSXDsPi2k6BSB4PwAAPKJe1TebSzAAAAAASUVORK5CYII="
 };
 }),
+"[project]/src/app/assets/flores.png (static in ecmascript, tag client)", ((__turbopack_context__) => {
+
+__turbopack_context__.v("/_next/static/media/flores.ec7e0de5.png");}),
+"[project]/src/app/assets/flores.png.mjs { IMAGE => \"[project]/src/app/assets/flores.png (static in ecmascript, tag client)\" } [app-rsc] (structured image object with data url, ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$assets$2f$flores$2e$png__$28$static__in__ecmascript$2c$__tag__client$29$__ = __turbopack_context__.i("[project]/src/app/assets/flores.png (static in ecmascript, tag client)");
+;
+const __TURBOPACK__default__export__ = {
+    src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$assets$2f$flores$2e$png__$28$static__in__ecmascript$2c$__tag__client$29$__["default"],
+    width: 1024,
+    height: 1536,
+    blurWidth: 5,
+    blurHeight: 8,
+    blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAAs0lEQVR42gGoAFf/ADgwGQA7MxcAXEseBHZeJAxZSR8DADkxFwBSQxsBtIw0YNWlPKmlgjFDAFFCGwGIbCkT3as+l+ayQMnFmjlhAJN0LCrgrT+m6rRBkuizQICshzIxALCJM03tt0LB5rI/ft6rPXCGaikYAHphJQzToztZ3qw9YbuRNURbSx4EAGxXIwmkgC8ri2woHWZSIAo/NhgAAE5BHQJRQxwCQTYXADwzGAA6MhoA95k3majIFxMAAAAASUVORK5CYII="
+};
+}),
+"[project]/src/app/assets/flores_2.png (static in ecmascript, tag client)", ((__turbopack_context__) => {
+
+__turbopack_context__.v("/_next/static/media/flores_2.bf6b3e29.png");}),
+"[project]/src/app/assets/flores_2.png.mjs { IMAGE => \"[project]/src/app/assets/flores_2.png (static in ecmascript, tag client)\" } [app-rsc] (structured image object with data url, ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$assets$2f$flores_2$2e$png__$28$static__in__ecmascript$2c$__tag__client$29$__ = __turbopack_context__.i("[project]/src/app/assets/flores_2.png (static in ecmascript, tag client)");
+;
+const __TURBOPACK__default__export__ = {
+    src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$assets$2f$flores_2$2e$png__$28$static__in__ecmascript$2c$__tag__client$29$__["default"],
+    width: 1024,
+    height: 1536,
+    blurWidth: 5,
+    blurHeight: 8,
+    blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAAs0lEQVR42gGoAFf/ACEaAQEjHAEBFREAABENAAAQDQAAAEE0CilJOw0yJh4CABQQAAASDgAAAFtJEk2Jax+0UkEOLyQcAQAYEwAAAIdoHYm9kCv0d10ZZ1A/DSIsIwMEAE09DS5wWRmui2wgwqiAJspTQg4xACUdAgJQQA89iWsg1Jh2I9dXRRAvABUQAAAzKQYRWUgSXWVQFVtZSBNTABENAAAbFQEAKyIDATAmBAE1KwcLn4gfjJ7u1kIAAAAASUVORK5CYII="
+};
+}),
 "[project]/src/app/components/HeroSection.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -162,11 +204,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$down$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/arrow-down.js [app-rsc] (ecmascript) <export default as ArrowDown>");
 // Certifique-se de que 'placa' aponta para a imagem já com fundo transparente (PNG)
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$assets$2f$placa$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$src$2f$app$2f$assets$2f$placa$2e$png__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/src/app/assets/placa.png.mjs { IMAGE => "[project]/src/app/assets/placa.png (static in ecmascript, tag client)" } [app-rsc] (structured image object with data url, ecmascript)');
-(()=>{
-    const e = new Error("Cannot find module '../assets/flor-decorativa.png'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+// Imagem decorativa usada atrás das palavras (pode ser a flor que você quiser)
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$assets$2f$flores$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$src$2f$app$2f$assets$2f$flores$2e$png__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/src/app/assets/flores.png.mjs { IMAGE => "[project]/src/app/assets/flores.png (static in ecmascript, tag client)" } [app-rsc] (structured image object with data url, ecmascript)');
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$assets$2f$flores_2$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$src$2f$app$2f$assets$2f$flores_2$2e$png__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/src/app/assets/flores_2.png.mjs { IMAGE => "[project]/src/app/assets/flores_2.png (static in ecmascript, tag client)" } [app-rsc] (structured image object with data url, ecmascript)');
+;
 ;
 ;
 ;
@@ -259,7 +300,7 @@ const HeroSection = ()=>{
                                     className: "relative inline-flex items-center",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                            src: florDecorativa,
+                                            src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$assets$2f$flores$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$src$2f$app$2f$assets$2f$flores$2e$png__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
                                             alt: "",
                                             width: 72,
                                             height: 72,
@@ -294,7 +335,7 @@ const HeroSection = ()=>{
                                     className: "relative inline-flex items-center",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                            src: florDecorativa,
+                                            src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$assets$2f$flores_2$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$src$2f$app$2f$assets$2f$flores_2$2e$png__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
                                             alt: "",
                                             width: 72,
                                             height: 72,
@@ -513,4 +554,4 @@ __turbopack_context__.n(__turbopack_context__.i("[project]/src/app/page.tsx [app
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__7dec95d0._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__6304e2eb._.js.map
