@@ -44,7 +44,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="font-body text-xs text-muted-foreground uppercase tracking-wider">
-            © {currentYear} Jaire — Rio de Janeiro, BR
+            © {currentYear} Jaibe — Rio de Janeiro, BR
           </p>
         </div>
       </div>

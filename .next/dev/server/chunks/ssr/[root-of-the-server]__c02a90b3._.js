@@ -633,7 +633,7 @@ const Footer = ()=>{
                         children: [
                             "© ",
                             currentYear,
-                            " Jaire — Rio de Janeiro, BR"
+                            " Jaibe — Rio de Janeiro, BR"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/components/Footer.tsx",
