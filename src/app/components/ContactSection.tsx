@@ -1,152 +1,223 @@
-import { Button } from "../components/ui/button";
-import { Instagram, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import React from "react";
+import { Instagram, Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
+
 import florCacau from "../assets/flordecacau.png";
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="py-20 md:py-28 bg-card relative overflow-hidden texture-noise">
-      {/* Decorative Element */}
-      <img
-        src={florCacau}
-        alt=""
-        className="absolute -right-12 top-20 w-36 opacity-30 pointer-events-none rotate-12"
-        aria-hidden="true"
-      />
-      
+    <section
+      id="contato"
+      className="py-20 md:py-28 bg-card relative overflow-hidden texture-noise"
+    >
+      {/* Street decals (mais calêndula) */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.09]">
+        <div className="absolute -left-24 top-16 w-[420px] h-[420px] border-2 border-primary rotate-6" />
+        <div className="absolute right-10 bottom-10 w-[280px] h-[280px] border-2 border-primary -rotate-12" />
+      </div>
+
+      {/* Sticker/tag (calêndula forte) */}
+      <div className="absolute left-6 md:left-10 top-10 -rotate-6 border-2 border-primary bg-primary/15 px-4 py-2 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.9)]">
+        <p className="font-display text-xs tracking-[0.35em] text-foreground/90">
+          STREET CONTACT
+        </p>
+      </div>
+
       {/* Accent line */}
-      <div className="absolute bottom-0 right-1/4 w-px h-40 bg-gradient-to-t from-primary to-transparent" />
+      <div className="absolute bottom-0 right-1/4 w-px h-44 bg-gradient-to-t from-primary to-transparent" />
+
+      {/* Decorative background flower */}
+      <div className="absolute -right-24 top-6 opacity-20 rotate-12 pointer-events-none select-none">
+        <Image src={florCacau} alt="" width={420} height={420} aria-hidden />
+      </div>
 
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left Content */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-1 bg-primary" />
-              <span className="font-display text-primary text-lg tracking-[0.3em] uppercase">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Left */}
+          <div className="max-w-xl">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-[2px] bg-primary" />
+              <span className="font-display text-primary text-lg tracking-[0.35em] uppercase">
                 Contato
               </span>
             </div>
-            <h2 className="font-display text-5xl md:text-6xl text-foreground mb-6 leading-none">
+
+            <h2 className="font-display text-5xl md:text-6xl text-foreground leading-[0.9]">
               VAMOS CRIAR
               <br />
-              <span className="text-primary">JUNTOS?</span>
+              <span className="text-primary drop-shadow-sm">JUNTOS?</span>
             </h2>
-            <p className="font-body text-foreground/70 mb-10 max-w-md text-base">
-              Entre em contato pra agendar sua sessão ou conhecer minhas obras. 
-              Cada projeto começa com uma conversa.
+
+            <p className="font-body text-foreground/75 mt-6 mb-8 text-base md:text-[17px] leading-relaxed">
+              Me chama pra agendar sua sessão ou trocar uma ideia sobre sua arte.
+              <span className="text-foreground/95"> Direto, simples e real.</span>
             </p>
 
-            {/* Contact Info - street style */}
-            <div className="space-y-4">
-              <a
+            {/* CTA - calêndula bem presente */}
+            <a
+              href="https://wa.me/5511999999999?text=Oi%21%20Quero%20agendar%20uma%20sess%C3%A3o."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-5 py-3 border-2 border-primary/70
+                         bg-primary/20 text-foreground transition-all
+                         shadow-[6px_6px_0_0_hsl(var(--foreground)/0.9)]
+                         hover:bg-primary/28 hover:border-primary
+                         hover:translate-x-[1px] hover:translate-y-[1px]
+                         active:translate-x-[3px] active:translate-y-[3px]
+                         active:shadow-[3px_3px_0_0_hsl(var(--foreground)/0.9)]
+                         focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
+            >
+              <span className="font-display tracking-[0.22em]">CHAMAR NO WHATSAPP</span>
+              <ArrowUpRight size={18} className="text-primary" />
+            </a>
+
+            {/* Cards */}
+            <div className="mt-8 grid gap-4">
+              <StreetCardYellow
                 href="mailto:contato@jaire.art"
-                className="flex items-center gap-4 text-foreground/80 hover:text-primary transition-colors group p-3 border border-transparent hover:border-border"
-              >
-                <div className="w-10 h-10 bg-secondary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <Mail size={18} className="text-primary" />
-                </div>
-                <div>
-                  <p className="font-display text-xs text-muted-foreground tracking-wider">EMAIL</p>
-                  <p className="font-body text-sm">contato@jaire.art</p>
-                </div>
-              </a>
+                title="EMAIL"
+                value="contato@jaire.art"
+                icon={<Mail size={18} className="text-primary" />}
+              />
 
-              <a
+              <StreetCardYellow
                 href="tel:+5511999999999"
-                className="flex items-center gap-4 text-foreground/80 hover:text-primary transition-colors group p-3 border border-transparent hover:border-border"
-              >
-                <div className="w-10 h-10 bg-secondary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <Phone size={18} className="text-primary" />
-                </div>
-                <div>
-                  <p className="font-display text-xs text-muted-foreground tracking-wider">WHATSAPP</p>
-                  <p className="font-body text-sm">(11) 99999-9999</p>
-                </div>
-              </a>
+                title="WHATSAPP"
+                value="(11) 99999-9999"
+                icon={<Phone size={18} className="text-primary" />}
+              />
 
-              <a
+              <StreetCardYellow
                 href="https://instagram.com/jaire.tattoo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 text-foreground/80 hover:text-primary transition-colors group p-3 border border-transparent hover:border-border"
-              >
-                <div className="w-10 h-10 bg-secondary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <Instagram size={18} className="text-primary" />
-                </div>
-                <div>
-                  <p className="font-display text-xs text-muted-foreground tracking-wider">INSTAGRAM</p>
-                  <p className="font-body text-sm">@jaire.tattoo</p>
-                </div>
-              </a>
+                title="INSTAGRAM"
+                value="@jaire.tattoo"
+                icon={<Instagram size={18} className="text-primary" />}
+                external
+              />
 
-              <div className="flex items-center gap-4 text-foreground/80 p-3">
-                <div className="w-10 h-10 bg-secondary flex items-center justify-center">
-                  <MapPin size={18} className="text-primary" />
-                </div>
-                <div>
-                  <p className="font-display text-xs text-muted-foreground tracking-wider">ESTÚDIO</p>
-                  <p className="font-body text-sm">São Paulo, SP</p>
+              {/* Location (non-link) */}
+              <div className="relative border-2 border-border bg-primary/10 p-4 shadow-[8px_8px_0_0_hsl(var(--foreground)/0.9)]">
+                {/* tape */}
+                <div className="absolute -top-3 left-6 w-20 h-6 bg-primary/35 border-2 border-primary/70 rotate-[-6deg]" />
+                <div className="flex items-center gap-4">
+                  <div className="w-11 h-11 bg-secondary border-2 border-primary/50 flex items-center justify-center">
+                    <MapPin size={18} className="text-primary" />
+                  </div>
+                  <div className="leading-tight">
+                    <p className="font-display text-[11px] text-muted-foreground tracking-[0.25em]">
+                      ESTÚDIO
+                    </p>
+                    <p className="font-body text-sm text-foreground/95">
+                      São Paulo, SP
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right - Form */}
-          <div className="bg-background p-8 border-2 border-border">
-            <h3 className="font-display text-2xl text-foreground mb-6 tracking-wider">
-              SOLICITE UM ORÇAMENTO
-            </h3>
-            <form className="space-y-4">
-              <div>
-                <label className="font-display text-xs text-muted-foreground tracking-wider mb-2 block">
-                  NOME
-                </label>
-                <input
-                  type="text"
-                  className="w-full bg-secondary border-2 border-border px-4 py-3 font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                  placeholder="Seu nome"
+          {/* Right - poster com glow calêndula */}
+          <div className="relative flex items-start justify-center lg:justify-end">
+            {/* glow */}
+            <div className="pointer-events-none absolute -inset-10 bg-primary/20 blur-3xl opacity-70" />
+
+            <a
+              href="#portfolio"
+              className="group relative w-full max-w-[520px]
+                         border-2 border-primary/60 bg-background p-6 md:p-8
+                         shadow-[10px_10px_0_0_hsl(var(--foreground)/0.9)]
+                         transition-transform hover:-translate-y-1
+                         hover:border-primary"
+              aria-label="Ver portfólio"
+            >
+              {/* tape corners (calêndula) */}
+              <div className="absolute -top-3 left-8 w-24 h-7 bg-primary/35 border-2 border-primary/70 rotate-[10deg]" />
+              <div className="absolute -top-3 right-10 w-20 h-7 bg-primary/35 border-2 border-primary/70 rotate-[-8deg]" />
+
+              <div className="flex items-center justify-between gap-6 mb-4">
+                <p className="font-display text-xs tracking-[0.35em] text-muted-foreground">
+                  POSTER
+                </p>
+                <span className="font-display text-xs text-primary tracking-[0.25em] inline-flex items-center gap-2">
+                  VER PORTFÓLIO <ArrowUpRight size={14} />
+                </span>
+              </div>
+
+              <div className="relative border-2 border-primary/50 bg-primary/10 p-4">
+                <Image
+                  src={florCacau}
+                  alt="Flor decorativa"
+                  width={420}
+                  height={420}
+                  className="object-contain transition-transform duration-500
+                             group-hover:rotate-3 group-hover:scale-[1.03]"
+                  priority
                 />
               </div>
-              <div>
-                <label className="font-display text-xs text-muted-foreground tracking-wider mb-2 block">
-                  EMAIL
-                </label>
-                <input
-                  type="email"
-                  className="w-full bg-secondary border-2 border-border px-4 py-3 font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                  placeholder="seu@email.com"
-                />
+
+              <div className="mt-5">
+                <h3 className="font-display text-xl md:text-2xl tracking-[0.18em] text-foreground">
+                  TATUAGEM & ARTE
+                </h3>
+                <p className="font-body text-sm text-foreground/75 mt-2 leading-relaxed">
+                  Curtiu o estilo? Vem ver os trampos e me chama pra criar algo com sua cara.
+                </p>
               </div>
-              <div>
-                <label className="font-display text-xs text-muted-foreground tracking-wider mb-2 block">
-                  TIPO DE TRABALHO
-                </label>
-                <select className="w-full bg-secondary border-2 border-border px-4 py-3 font-body text-foreground focus:outline-none focus:border-primary transition-colors">
-                  <option value="">Selecione</option>
-                  <option value="tatuagem">Tatuagem</option>
-                  <option value="arte">Arte Plástica</option>
-                  <option value="ambos">Ambos</option>
-                </select>
-              </div>
-              <div>
-                <label className="font-display text-xs text-muted-foreground tracking-wider mb-2 block">
-                  MENSAGEM
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full bg-secondary border-2 border-border px-4 py-3 font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
-                  placeholder="Descreva sua ideia..."
-                />
-              </div>
-              <Button variant="hero" size="xl" className="w-full mt-2">
-                Enviar
-              </Button>
-            </form>
+
+            </a>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+function StreetCardYellow({
+  href,
+  title,
+  value,
+  icon,
+  external,
+}: {
+  href: string;
+  title: string;
+  value: string;
+  icon: React.ReactNode;
+  external?: boolean;
+}) {
+  return (
+    <a
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className="relative group border-2 border-border bg-primary/10 p-4
+                 shadow-[8px_8px_0_0_hsl(var(--foreground)/0.9)]
+                 transition-all hover:-translate-y-[2px]
+                 hover:border-primary/70 hover:bg-primary/14
+                 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
+    >
+      {/* tape */}
+      <div className="absolute -top-3 left-6 w-20 h-6 bg-primary/40 border-2 border-primary/70 rotate-[-6deg] opacity-0 group-hover:opacity-100 transition-opacity" />
+
+      <div className="flex items-center gap-4">
+        <div className="w-11 h-11 bg-secondary border-2 border-primary/50 flex items-center justify-center">
+          {icon}
+        </div>
+
+        <div className="leading-tight">
+          <p className="font-display text-[11px] text-muted-foreground tracking-[0.25em]">
+            {title}
+          </p>
+          <p className="font-body text-sm text-foreground/95">{value}</p>
+        </div>
+
+        <ArrowUpRight
+          size={16}
+          className="ml-auto text-foreground/30 group-hover:text-primary transition-colors"
+        />
+      </div>
+    </a>
+  );
+}
 
 export default ContactSection;
