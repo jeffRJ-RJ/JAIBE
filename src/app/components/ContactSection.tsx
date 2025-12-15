@@ -1,8 +1,8 @@
 import Image from "next/image";
-import React from "react";
 import { Instagram, Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
 
 import florCacau from "../assets/flordecacau.png";
+import { StreetCardYellow } from "../components/StreetCardYellow";
 
 const ContactSection = () => {
   return (
@@ -17,11 +17,6 @@ const ContactSection = () => {
       </div>
 
       {/* Sticker/tag (calêndula forte) */}
-      <div className="absolute left-6 md:left-10 top-10 -rotate-6 border-2 border-primary bg-primary/15 px-4 py-2 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.9)]">
-        <p className="font-display text-xs tracking-[0.35em] text-foreground/90">
-          STREET CONTACT
-        </p>
-      </div>
 
       {/* Accent line */}
       <div className="absolute bottom-0 right-1/4 w-px h-44 bg-gradient-to-t from-primary to-transparent" />
@@ -85,6 +80,7 @@ const ContactSection = () => {
                 title="WHATSAPP"
                 value="(11) 99999-9999"
                 icon={<Phone size={18} className="text-primary" />}
+                badge="ORIGINAL"
               />
 
               <StreetCardYellow
@@ -118,7 +114,6 @@ const ContactSection = () => {
 
           {/* Right - poster com glow calêndula */}
           <div className="relative flex items-start justify-center lg:justify-end">
-            {/* glow */}
             <div className="pointer-events-none absolute -inset-10 bg-primary/20 blur-3xl opacity-70" />
 
             <a
@@ -163,7 +158,6 @@ const ContactSection = () => {
                   Curtiu o estilo? Vem ver os trampos e me chama pra criar algo com sua cara.
                 </p>
               </div>
-
             </a>
           </div>
         </div>
@@ -171,53 +165,5 @@ const ContactSection = () => {
     </section>
   );
 };
-
-function StreetCardYellow({
-  href,
-  title,
-  value,
-  icon,
-  external,
-}: {
-  href: string;
-  title: string;
-  value: string;
-  icon: React.ReactNode;
-  external?: boolean;
-}) {
-  return (
-    <a
-      href={href}
-      target={external ? "_blank" : undefined}
-      rel={external ? "noopener noreferrer" : undefined}
-      className="relative group border-2 border-border bg-primary/10 p-4
-                 shadow-[8px_8px_0_0_hsl(var(--foreground)/0.9)]
-                 transition-all hover:-translate-y-[2px]
-                 hover:border-primary/70 hover:bg-primary/14
-                 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
-    >
-      {/* tape */}
-      <div className="absolute -top-3 left-6 w-20 h-6 bg-primary/40 border-2 border-primary/70 rotate-[-6deg] opacity-0 group-hover:opacity-100 transition-opacity" />
-
-      <div className="flex items-center gap-4">
-        <div className="w-11 h-11 bg-secondary border-2 border-primary/50 flex items-center justify-center">
-          {icon}
-        </div>
-
-        <div className="leading-tight">
-          <p className="font-display text-[11px] text-muted-foreground tracking-[0.25em]">
-            {title}
-          </p>
-          <p className="font-body text-sm text-foreground/95">{value}</p>
-        </div>
-
-        <ArrowUpRight
-          size={16}
-          className="ml-auto text-foreground/30 group-hover:text-primary transition-colors"
-        />
-      </div>
-    </a>
-  );
-}
 
 export default ContactSection;
